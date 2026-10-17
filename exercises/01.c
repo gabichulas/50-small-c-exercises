@@ -2,11 +2,7 @@
 #include "lib.h"
 
 /* Return nonzero exactly when c is an ASCII decimal digit. */
-int my_isdigit(int c) {
-    (void)c;
-    /* TODO: implement. */
-    return 0;
-}
+int my_isdigit(int c) { return (c >= '0' && c <= '9'); }
 
 #ifndef EXERCISE_TEST
 int main(void) {

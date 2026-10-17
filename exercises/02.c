@@ -2,11 +2,7 @@
 #include "lib.h"
 
 /* Recognize ASCII letters, without locale-dependent library functions. */
-int my_isalpha(int c) {
-    (void)c;
-    /* TODO: implement. */
-    return 0;
-}
+int my_isalpha(int c) { return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122)); }
 
 #ifndef EXERCISE_TEST
 int main(void) {

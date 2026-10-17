@@ -3,9 +3,10 @@
 
 /* Uppercase an ASCII lowercase letter; preserve every other int. */
 int my_toupper(int c) {
-    (void)c;
-    /* TODO: implement. */
-    return 0;
+    if (c >= 'a' && c <= 'z') {
+        return (c - 32);
+    }
+    return c;
 }
 
 #ifndef EXERCISE_TEST

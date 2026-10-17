@@ -3,9 +3,10 @@
 
 /* Lowercase an ASCII uppercase letter; preserve every other int. */
 int my_tolower(int c) {
-    (void)c;
-    /* TODO: implement. */
-    return 0;
+    if (c >= 'A' && c <= 'Z') {
+        return (c + 32);
+    }
+    return c;
 }
 
 #ifndef EXERCISE_TEST

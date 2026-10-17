@@ -2,11 +2,7 @@
 #include "lib.h"
 
 /* Recognize the six ASCII whitespace characters. */
-int my_isspace(int c) {
-    (void)c;
-    /* TODO: implement. */
-    return 0;
-}
+int my_isspace(int c) { return ((c >= 9 && c <= 13) || c == ' '); }
 
 #ifndef EXERCISE_TEST
 int main(void) {
