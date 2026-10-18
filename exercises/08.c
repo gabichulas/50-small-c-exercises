@@ -3,11 +3,12 @@
 
 /* Keep value inside the inclusive range [minimum, maximum]. */
 int clamp_int(int value, int minimum, int maximum) {
-    (void)value;
-    (void)minimum;
-    (void)maximum;
-    /* TODO: implement. */
-    return 0;
+    if (value > maximum) {
+        return maximum;
+    } else if (value < minimum) {
+        return minimum;
+    }
+    return value;
 }
 
 #ifndef EXERCISE_TEST
