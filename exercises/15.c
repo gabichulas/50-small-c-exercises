@@ -3,10 +3,13 @@
 
 /* Return the last matching character's address, or NULL. */
 char *my_strrchr(const char *s, int c) {
-    (void)s;
-    (void)c;
-    /* TODO: implement. */
-    return NULL;
+  const char *last = NULL;
+  do {
+    if (*s == c) {
+      last = s;
+    }
+  } while (*s++ != '\0');
+  return (char *)last;
 }
 
 #ifndef EXERCISE_TEST
