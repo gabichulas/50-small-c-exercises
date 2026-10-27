@@ -3,11 +3,16 @@
 
 /* Copy count bytes between non-overlapping memory regions. */
 void *my_memcpy(void *destination, const void *source, size_t count) {
-    (void)destination;
-    (void)source;
-    (void)count;
-    /* TODO: implement. */
-    return NULL;
+  int i;
+  char *dst = (char *)destination;
+  const char *src = (const char *)source;
+
+  for (i = 0; i < (int)count; i++) {
+    *dst = *src;
+    dst++;
+    src++;
+  }
+  return destination;
 }
 
 #ifndef EXERCISE_TEST

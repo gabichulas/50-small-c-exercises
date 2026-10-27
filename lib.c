@@ -6,8 +6,24 @@ typedef int keep_translation_unit_nonempty;
 int my_isalpha(int c) { return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122)); }
 int my_isdigit(int c) { return (c >= '0' && c <= '9'); }
 int my_toupper(int c) {
-    if (c >= 'a' && c <= 'z') {
-        return (c - 32);
-    }
-    return c;
+  if (c >= 'a' && c <= 'z') {
+    return (c - 32);
+  }
+  return c;
+}
+int my_strcmp(const char *a, const char *b) {
+  while (*a != '\0' && (*a == *b)) {
+    a++;
+    b++;
+  }
+
+  int u_a = *(const unsigned char *)a;
+  int u_b = *(const unsigned char *)b;
+
+  if (u_a > u_b) {
+    return 1;
+  } else if (u_a < u_b) {
+    return -1;
+  }
+  return 0;
 }

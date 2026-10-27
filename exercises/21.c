@@ -3,11 +3,14 @@
 
 /* Fill count bytes with value converted to unsigned char. */
 void *my_memset(void *destination, int value, size_t count) {
-    (void)destination;
-    (void)value;
-    (void)count;
-    /* TODO: implement. */
-    return NULL;
+  int i;
+  char *ptr = (char *)destination;
+
+  for (i = 0; i < (int)count; i++) {
+    *ptr = (char)value;
+    ptr++;
+  }
+  return destination;
 }
 
 #ifndef EXERCISE_TEST

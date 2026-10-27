@@ -7,5 +7,6 @@
 int my_isalpha(int c);
 int my_isdigit(int c);
 int my_toupper(int c);
+int my_strcmp(const char *a, const char *b);
 
 #endif
